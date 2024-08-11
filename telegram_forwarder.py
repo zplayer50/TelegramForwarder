@@ -1,6 +1,12 @@
 import re
 import asyncio
+import os
 from telethon.sync import TelegramClient
+from keep_alive import keep_alive
+keep_alive()
+
+bot = Bot(token=os.environ.get('token'))
+dp = Dispatcher(bot)
 
 class TelegramForwarder:
     def __init__(self, api_id, api_hash, phone_number):
