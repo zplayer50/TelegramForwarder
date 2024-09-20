@@ -1,61 +1,84 @@
-Telegram Forwarder
-Description
-Telegram Forwarder is a Python script designed to automate the process of forwarding messages from specified source chats to destination channels on Telegram. This script leverages the Telethon library to interact with the Telegram API, allowing users to perform various tasks such as listing chats, forwarding messages, filtering messages based on keywords, and cleaning messages by removing specified patterns.
+# Telegram Autoforwarder
 
-Key Features
-Connection and Authorization: The script connects to Telegram and authorizes the user if not already authorized. This ensures that the script can interact with the Telegram API on behalf of the user.
+Telegram Autoforwarder is a powerful Python script that allows you to automatically forward messages between Telegram chats based on customizable rules. It supports multiple forwarding rules, advanced filtering options, and various message processing features.
 
-Listing Chats: The script can list all chats associated with the user's account and save them to a file. This feature is useful for getting an overview of the user's chats and their respective IDs.
+## Features
 
-Forwarding Messages: The script can forward messages from specified source chats to destination channels. Users can specify the source chat IDs, destination channel IDs, and keywords to filter messages.
+- Forward messages from multiple source chats to multiple destination chats
+- Filter messages based on keywords and regular expressions
+- Schedule message forwarding
+- Forward edited messages
+- Add custom prefix and suffix to forwarded messages
+- Remove links from forwarded messages
+- Support for media forwarding
+- Easy-to-use command-line interface for managing forwarding rules
+- Configuration storage using JSON for persistent settings
 
-Keyword Filtering: The script allows users to filter messages based on keywords. Only messages containing the specified keywords will be forwarded to the destination channels.
+## Requirements
 
-Message Cleaning: The script can clean messages by removing specified patterns. This feature is useful for removing unwanted content from messages before forwarding them.
+- Python 3.7+
+- Telethon library
+- Other dependencies listed in `requirements.txt`
 
-Requirements
-Python 3.7 or higher: The script is written in Python and requires Python 3.7 or higher to run.
+## Setup
 
-Telethon Library: The script uses the Telethon library to interact with the Telegram API. You can install the Telethon library using pip:
+1. Clone the repository:
 
+   ```bash
+   git clone https://github.com/yourusername/Telegram-Autoforwarder.git
+   cd Telegram-Autoforwarder
+   ```
 
-pip install telethon
-Setup
-Credentials File: Create a credentials.txt file with your Telegram API ID, API Hash, and phone number, each on a new line:
+2. Install dependencies:
 
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-API_ID
-API_HASH
-PHONE_NUMBER
-Patterns File: Create a patterns_to_remove.txt file with patterns to remove from messages, each pattern on a new line.
+3. Obtain Telegram API credentials:
 
-Usage
-Run the script using Python:
+   - Go to https://my.telegram.org/apps and create a new application
+   - Note down the API ID and API Hash
 
+## Usage
 
-python telegram_forwarder.py
-You will be prompted to choose an option:
+1. Run the script:
 
-List Chats: Lists all chats and saves them to a file named chats_of_PHONE_NUMBER.txt.
-Forward Messages: Forwards messages from source chats to destination channels. You will be prompted to enter the source chat IDs, destination channel IDs, and keywords (optional).
-Functions
-TelegramForwarder Class
-__init__(api_id, api_hash, phone_number): Initializes the TelegramForwarder with the given API ID, API Hash, and phone number.
-load_patterns(): Loads patterns to remove from the patterns_to_remove.txt file.
-connect_and_authorize(): Connects to Telegram and authorizes the user if not already authorized.
-list_chats(): Lists all chats and saves them to a file.
-forward_messages_to_channels(source_chat_ids, destination_channel_ids, keywords): Forwards messages from source chats to destination channels based on keywords.
-clean_message(message_text): Cleans the message text by removing specified patterns.
-Helper Functions
-read_credentials(): Reads the API ID, API Hash, and phone number from the credentials.txt file.
-write_credentials(api_id, api_hash, phone_number): Writes the API ID, API Hash, and phone number to the credentials.txt file.
-Notes
-The script uses the Telethon library's sync version for simplicity.
-The script uses asyncio for asynchronous operations.
-The script assumes that the credentials.txt and patterns_to_remove.txt files are in the same directory as the script.
-The script saves the list of chats to a file named chats_of_PHONE_NUMBER.txt, where PHONE_NUMBER is the user's phone number.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+   ```bash
+   python TelegramForwarder.py
+   ```
+
+2. On first run, enter your Telegram API ID, API Hash, and phone number when prompted
+
+3. Choose from the following options:
+   - List Chats: View all available chats and their IDs
+   - Forward Messages: Start the forwarding process based on configured rules
+   - Edit Forwarding Rules: Add, modify, or delete forwarding rules
+
+## Configuring Forwarding Rules
+
+Each forwarding rule can include the following options:
+
+- Source chat ID
+- Destination channel IDs (multiple allowed)
+- Keywords for filtering
+- Regular expression pattern for advanced filtering
+- Include media option
+- Forward edited messages option
+- Scheduling option
+- Custom prefix and suffix for forwarded messages
+- Link removal option
+
+## Notes
+
+- Keep your API credentials secure and do not share them publicly
+- Ensure you have the necessary permissions in both source and destination chats
+- Be mindful of Telegram's rate limits to avoid getting your account banned
+
+## License
+
+This project is licensed under the MIT License.
+
 
 Acknowledgments
 Thanks to the Telethon library for providing a simple and efficient way to interact with Telegram.
