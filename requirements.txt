@@ -1,4 +1,5 @@
 telethon
+prompt_toolkit
+python-dotenv
+logging
 asyncio
-json
-re
