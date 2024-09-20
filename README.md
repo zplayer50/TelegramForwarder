@@ -26,7 +26,7 @@ Telegram Autoforwarder is a powerful Python script that allows you to automatica
 
    ```bash
    git https://github.com/zplayer50/TelegramForwarder.git
-   cd Telegram-Autoforwarder
+   cd telegram_forwarder
    ```
 
 2. Install dependencies:
@@ -45,7 +45,7 @@ Telegram Autoforwarder is a powerful Python script that allows you to automatica
 1. Run the script:
 
    ```bash
-   python TelegramForwarder.py
+   python telegram_forwarder.py
    ```
 
 2. On first run, enter your Telegram API ID, API Hash, and phone number when prompted
