@@ -86,4 +86,4 @@ Author
 joyal george
 
 Contact
-hunterz1389@gmail.com
+joyalgeorgevad11@gmail.com
