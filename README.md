@@ -25,7 +25,7 @@ Telegram Autoforwarder is a powerful Python script that allows you to automatica
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/Telegram-Autoforwarder.git
+   git https://github.com/zplayer50/TelegramForwarder.git
    cd Telegram-Autoforwarder
    ```
 
